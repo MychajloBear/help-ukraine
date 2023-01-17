@@ -7,6 +7,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import de.ukrainewin.helpukraine.model.Food;
+
 @RestController
 @RequestMapping("api/food")
 public class FoodController {
@@ -24,9 +26,9 @@ public class FoodController {
 	}
 
 	@GetMapping("{id}")
-	public /* Food */String listFood(@PathVariable String id) {
+	public Food getFood(@PathVariable String id) {
 		System.out.println("listSuggestedFoodsId");
-		return "one food with id "+ id;// foodService.list();
+		return new Food(id, "some name");// foodService.list();
 	}
 
 	@PostMapping()
