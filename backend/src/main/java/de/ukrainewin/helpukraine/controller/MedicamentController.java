@@ -16,24 +16,24 @@ import org.springframework.web.bind.annotation.RestController;
 public class MedicamentController {
 	
 	//@Autowired
-	//FoodService foodService;
+	//MedService medService;
 	
 	@GetMapping("{id}")
-	    public List</*Food*/String> listSuggestedMedicamentsId(@PathVariable String id) {
+	    public /*Med*/String getSuggestedMedicament(@PathVariable String id) {
 	        System.out.println("listSuggestedMedicamentsId");
-	        return List.of("id med", "exists");//foodService.list();
+	        return "id med "+ "exists";//medService.list();
 	    }
 	
 	
 	
 	
 	  @GetMapping
-	    public List</*Food*/String> listSuggestedMedicaments(@RequestParam Optional<String> search) {
+	    public List</*Med*/String> listSuggestedMedicaments(@RequestParam Optional<String> search) {
 	        System.out.println("listSuggestedMedicaments");
 			if (search.isPresent()) {
-	            //return foodService.search(search.get());
+	            //return medService.search(search.get());
 	        }
-	        return Arrays.asList(new String[]{"id med", "null"});//foodService.list();
+	        return Arrays.asList(new String[]{"id med", "null"});//medService.list();
 	    }
 
 }
