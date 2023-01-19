@@ -34,7 +34,7 @@ public class FoodService {
         throw new IllegalArgumentException("Id not found!");
     }
 
-    public Food addFood(Food Food) {
+    public Food addFood(Food food) {
         Food.setId(null//idService.generateId()
         		);
         return FoodRepo.insert(Food);//add(Food);
