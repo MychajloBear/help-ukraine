@@ -13,7 +13,7 @@ import de.ukrainewin.helpukraine.repo.FoodRepo;
 @Service
 public class FoodService {
 
-    private final FoodRepo FoodRepo;
+    private final FoodRepo foodRepo;
     //private final IdService idService;
 
     @Autowired
