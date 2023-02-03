@@ -1,0 +1,7 @@
+.food-gallery {
+    display: flex;
+    gap: 15px;
+    padding: 50px;
+    margin-top: 10px;
+    border-top: black solid 2px;
+}

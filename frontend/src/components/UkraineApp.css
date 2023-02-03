@@ -1,0 +1,95 @@
+.ukraine-app
+{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    padding-top:0;
+    
+    margin-bottom:0;
+    background-image: url("../pics/back2mb.jpeg");
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    text-align: center;
+}
+
+.food-app__title {
+    font-size: 5rem;
+    background-color: #183aa272;
+}
+
+.logo-img {  
+  
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    margin: 13px;
+    padding: 3px;
+ 
+    object-fit: contain;
+    text-align: center;
+    color: white;
+    background-color: #effb00c4;
+    border: 1px solid #333;
+    border-radius: 12px;
+}
+
+.logo-link {  
+  
+    max-width: 100px;
+    margin: 13px;
+    padding: 3px;
+    color: white;
+    background-color: rgba(4, 64, 227, 0.802);
+    border: 1px solid #333;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+a {
+    max-width: 100px;
+    cursor: help;
+    text-decoration: none;
+}
+
+a.logo-link {
+    max-width: 100px;
+    cursor: help;
+}
+
+a.active {
+    max-width: 100px;
+    cursor: help;
+}
+
+NavLink {
+    max-width: 100px;
+    cursor: help;
+}
+
+h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: yellow;  
+    margin-top:0;
+}
+
+h2 {
+    padding-top: 50px;
+    color: yellow;  
+    font-size: 20;
+    margin-top:0;
+}
+
+.box {
+    padding-left: 30px;
+    padding-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+  }
+  .box>* {
+      flex: 2;
+      min-width: 200px;
+  }

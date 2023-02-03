@@ -1,0 +1,13 @@
+.add-food__name {
+    padding: 16px;
+    font-size: 16px;
+    margin: 4px;
+}
+
+.add-food__button {
+    padding: 16px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(51, 48, 244, 0.875);
+    border-radius: 10px;
+}
