@@ -1,0 +1,24 @@
+.food-card {
+    border: rgb(0, 0, 0) solid 1px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.food-card__name {
+    font-size: 200%;
+    color: blue;
+    background-color: rgba(255, 230, 0, 0.633);
+}
+
+.food-card__id {
+    font-size: 75%;
+}
+
+.food-card__button {
+    padding: 8px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.633);
+    border-radius: 10px;
+}
