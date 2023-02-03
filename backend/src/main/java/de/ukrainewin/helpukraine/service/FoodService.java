@@ -14,8 +14,8 @@ import de.ukrainewin.helpukraine.repo.FoodRepo;
 @Service
 public class FoodService {
 
-	private final FoodRepo foodRepo;
 	private final IdService idService;
+	private final FoodRepo foodRepo;
 
 	public FoodService(FoodRepo foodRepo, IdService idService) {
 		this.foodRepo = foodRepo;
