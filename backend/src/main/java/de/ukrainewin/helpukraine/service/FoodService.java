@@ -33,4 +33,15 @@ public class FoodService {
 		}
 		throw new IllegalArgumentException("Food with Id " + id + " not found!");
 	}
+
+	public List<Food> search(String s) {
+		List<Food> searchResultList = new ArrayList<>();
+		for (Food food : list()) {
+			if (food.getName().contains(s)) {
+				searchResultList.add(food);
+			}
+		}
+		return searchResultList;
+	}
+
 }
