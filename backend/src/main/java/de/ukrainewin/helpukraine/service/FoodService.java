@@ -8,51 +8,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import de.ukrainewin.helpukraine.model.Food;
+import de.ukrainewin.helpukraine.model.FoodDTO;
 import de.ukrainewin.helpukraine.repo.FoodRepo;
 
 @Service
 public class FoodService {
 
-    private final FoodRepo FoodRepo;
-    //private final IdService idService;
+	private final FoodRepo foodRepo;
+	private final IdService idService;
 
-    @Autowired
-    public FoodService(FoodRepo FoodRepo//, IdService idService
-    		) {
-        this.FoodRepo = FoodRepo;
-        //this.idService = idService;
-    }
+	public FoodService(FoodRepo foodRepo, IdService idService) {
+		this.foodRepo = foodRepo;
+		this.idService = idService;
+	}
 
-    public List<Food> list() {
-        return FoodRepo.findAll();//getFoods();
-    }
-    public Food findById(String id) {
-        Optional<Food> optionalFood = FoodRepo.findById(id);
-        if (optionalFood.isPresent()) {
-            return optionalFood.get();
-        }
-        throw new IllegalArgumentException("Id not found!");
-    }
+	public List<Food> list() {
+		return foodRepo.findAll();
+	}
 
-    public Food addFood(Food Food) {
-        Food.setId(null//idService.generateId()
-        		);
-        return FoodRepo.insert(Food);//add(Food);
-    }
-
-    public List<Food> search(String s) {
-        List<Food> searchResultList = new ArrayList<>();
-        for (Food Food: list()) {
-            if (Food.getName().contains(s)){
-                searchResultList.add(Food);
-            }
-        }
-
-        return searchResultList;
-    }
-
-    public void delete(String id) {
-        Food Food = findById(id);
-        FoodRepo.delete(Food);
-    }
+	public Food findById(String id) {
+		Optional<Food> optionalFood = foodRepo.findById(id);
+		if (optionalFood.isPresent()) {
+			return optionalFood.get();
+		}
+		throw new IllegalArgumentException("Food with Id " + id + " not found!");
+	}
 }
