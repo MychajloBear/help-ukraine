@@ -5,7 +5,7 @@ import java.util.Objects;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("foods")
+@Document("food")
 public class Food {
 	@Id
     private String id;
@@ -47,7 +47,7 @@ public class Food {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Food{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
