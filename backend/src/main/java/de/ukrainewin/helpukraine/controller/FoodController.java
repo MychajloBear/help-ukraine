@@ -30,4 +30,19 @@ public class FoodController {
 		return foodService.findById(id);
 	}
 
+	@PostMapping()
+	public Food addFood(@RequestBody FoodDTO foodDTO) {
+		return foodService.addFood(foodDTO);
+	}
+
+	@DeleteMapping("{id}")
+	public void deleteFood(@PathVariable String id) {
+		foodService.delete(id);
+	}
+	
+	@PutMapping("{id}")
+	public void putFood(@PathVariable String id) {
+		foodService.delete(id);
+	}
+
 }
