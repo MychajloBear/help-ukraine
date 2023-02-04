@@ -14,8 +14,8 @@ import de.ukrainewin.helpukraine.repo.FoodRepo;
 @Service
 public class FoodService {
 
-	private final IdService idService;
 	private final FoodRepo foodRepo;
+	private final IdService idService;
 
 	public FoodService(FoodRepo foodRepo, IdService idService) {
 		this.foodRepo = foodRepo;
@@ -34,6 +34,11 @@ public class FoodService {
 		throw new IllegalArgumentException("Food with Id " + id + " not found!");
 	}
 
+	public Food addFood(FoodDTO food) {
+		Food newFood = new Food(idService.generateId(), food.name());
+		return foodRepo.insert(newFood);
+	}
+
 	public List<Food> search(String s) {
 		List<Food> searchResultList = new ArrayList<>();
 		for (Food food : list()) {
@@ -44,4 +49,7 @@ public class FoodService {
 		return searchResultList;
 	}
 
+	public void delete(String id) {
+		foodRepo.deleteById(id);
+	}
 }
