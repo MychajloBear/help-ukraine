@@ -61,6 +61,10 @@ tmp/
 local.properties
 .loadpath
 .factorypath
+<<<<<<< HEAD
+=======
+*org.eclipse*
+>>>>>>> 43f1a58 (init master)
 
 ##############################
 ## NetBeans
